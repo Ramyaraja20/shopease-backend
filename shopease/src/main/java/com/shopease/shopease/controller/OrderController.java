@@ -33,4 +33,8 @@ public class OrderController {
     public OrderResponse myOrder(Authentication authentication, @PathVariable Long id) {
         return orderService.getMyOrder(authentication.getName(), id);
     }
+    @PutMapping("/{id}/cancel")
+    public OrderResponse cancel(Authentication authentication, @PathVariable Long id) {
+        return orderService.cancelMyOrder(authentication.getName(), id);
+    }
 }
