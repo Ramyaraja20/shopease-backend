@@ -4,6 +4,7 @@ import com.shopease.shopease.dto.OrderResponse;
 import com.shopease.shopease.dto.PageResponse;
 import com.shopease.shopease.dto.UpdateOrderStatusRequest;
 import com.shopease.shopease.service.OrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/admin/orders")
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMIN')")
+@Tag(name = "Admin Orders", description = "Admin-only order management")
 public class AdminOrderController {
 
     private final OrderService orderService;

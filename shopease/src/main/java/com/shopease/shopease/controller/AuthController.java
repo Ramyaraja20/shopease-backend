@@ -5,6 +5,7 @@ import com.shopease.shopease.dto.LoginRequest;
 import com.shopease.shopease.dto.RegisterRequest;
 import com.shopease.shopease.dto.UserResponse;
 import com.shopease.shopease.service.AuthService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
+@Tag(name = "Authentication", description = "Register and log in")
 public class AuthController {
 
     private final AuthService authService;

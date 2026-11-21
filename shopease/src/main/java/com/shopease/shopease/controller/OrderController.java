@@ -3,6 +3,7 @@ package com.shopease.shopease.controller;
 
 import com.shopease.shopease.dto.OrderResponse;
 import com.shopease.shopease.service.OrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/orders")
 @RequiredArgsConstructor
+@Tag(name = "Orders", description = "Place, view and cancel your orders")
 public class OrderController {
 
     private final OrderService orderService;

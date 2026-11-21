@@ -4,6 +4,7 @@ import com.shopease.shopease.dto.PageResponse;
 import com.shopease.shopease.dto.ProductRequest;
 import com.shopease.shopease.dto.ProductResponse;
 import com.shopease.shopease.service.ProductService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
+@Tag(name = "Products", description = "Browse, search and manage products")
 public class ProductController {
 
     private final ProductService productService;

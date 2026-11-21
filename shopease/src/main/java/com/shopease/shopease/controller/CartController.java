@@ -4,6 +4,7 @@ import com.shopease.shopease.dto.AddToCartRequest;
 import com.shopease.shopease.dto.CartResponse;
 import com.shopease.shopease.dto.UpdateCartItemRequest;
 import com.shopease.shopease.service.CartService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/cart")
 @RequiredArgsConstructor
+@Tag(name = "Cart", description = "Shopping cart of the logged-in user")
 public class CartController {
 
     private final CartService cartService;
